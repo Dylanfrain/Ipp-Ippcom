@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<style>
+    body,html {
+        margin: auto;
+
+        text-align: center;
+        background-color: #313131;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+    p {
+        color: white;
+    }
+
+    .space{
+        margin: 1% 0;
+        font-size: 300%;
+    }
+
+    .buttonPink {
+        width: 100vw;
+        cursor: pointer;
+        background: none;
+        color: #ec018b;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonPink:hover {
+        color: purple
+    }
+    .text1,
+    .text2,
+    .text3,
+    .text4 {
+        display: none;
+    }
+    
+    .imgSize{
+        width: 2vw;
+    }
+
+</style>
+<body>
+    <section id="firstBlock">
+        <button id="firstTitle" class="buttonPink">
+            <h2 class="space">CRÉATION GRAPHIQUE</h2>
+            <img class="imgSize" src="img/arrow.png" alt="">
+        </button>
+        <p id="textnb1" class="text1">Création graphique ou simple mise-en-page ?
+            De la recherche du visuel (image, photo, illustration…) à la mise en page, notre graphiste en interne se
+            charge de la réalisation de vos outils de communication.
+            Parlons-en ensemble, nous sommes là pour vous !</p>
+    </section>
+    <section id="secondBlock">
+        <button id="secondTitle" class="buttonPink">
+            <h2 class="space">IMPRESSIONS</h2>
+            <img class="imgSize" src="img/arrow.png" alt="">
+        </button>
+        <p id="textnb2" class="text2">Équipés d’une presse numérique et de deux presses offset, nous pouvons
+            prendre en charge tout type d’impression et proposer une large gamme de finition (découpe, vernis,
+            pelliculage, dorure, pliage, reliure (wire O, dos carré collé etc…)</p>
+    </section>
+    <section id="thirdBlock">
+        <button id="thirdTitle" class="buttonPink">
+            <h2 class="space">ÉVÉNEMENTIEL</h2>
+            <img class="imgSize" src="img/arrow.png" alt="">
+        </button>
+        <p id="textnb3" class="text3">Nous saurons vous surprendre et créer votre évènement sur-mesure !
+            Organisation - Gestion - Location de matériel
+            Nous avons la solution pour tous vos événements</p>
+    </section>
+    <section id="fourthBlock">
+        <button id="fourthTitle" class="buttonPink">
+            <h2 class="space">OBJETS PUBLICITAIRES ET TEXTILES PERSONNALISÉS</h2>
+            <img class="imgSize" src="img/arrow.png" alt="">
+        </button>
+        <p id="textnb4" class="text4">Au fil des ans, IPP & IPP Com a su s’entourer des partenaires efficaces et
+            réactifs
+            afin de proposer une gamme étoffée d’objets publicitaires, de goodies et de divers vêtements
+            personnalisés,
+            réalisé dans des délais raisonnables.</p>
+    </section>
+</body>
+
+<script>
+    let firstTitle = document.getElementById('firstTitle');
+    let text = document.getElementById('textnb1');
+    firstTitle.addEventListener('click', () => {
+        if (getComputedStyle(text).display != 'none') {
+            text.style.display = 'none';
+        }
+        else {
+            text.style.display = 'block';
+            document.getElementById('textnb2').style.display = 'none';
+            document.getElementById('textnb3').style.display = 'none';
+            document.getElementById('textnb4').style.display = 'none';
+        }
+    })
+    let secondTitle = document.getElementById('secondTitle');
+    let text2 = document.getElementById('textnb2');
+    secondTitle.addEventListener('click', () => {
+        if (getComputedStyle(text2).display != 'none') {
+            text2.style.display = 'none';
+        }
+        else {
+            text2.style.display = 'block';
+            document.getElementById('textnb1').style.display = 'none';
+            document.getElementById('textnb3').style.display = 'none';
+            document.getElementById('textnb4').style.display = 'none';
+        }
+    })
+    let thirdTitle = document.getElementById('thirdTitle');
+    let text3 = document.getElementById('textnb3');
+    thirdTitle.addEventListener('click', () => {
+        if (getComputedStyle(text3).display != 'none') {
+            text3.style.display = 'none';
+        }
+        else {
+            text3.style.display = 'block';
+            document.getElementById('textnb1').style.display = 'none';
+            document.getElementById('textnb2').style.display = 'none';
+            document.getElementById('textnb4').style.display = 'none';
+        }
+    })
+    let fourthTitle = document.getElementById('fourthTitle');
+    let text4 = document.getElementById('textnb4');
+    fourthTitle.addEventListener('click', () => {
+        if (getComputedStyle(text4).display != 'none') {
+            text4.style.display = 'none';
+        }
+        else {
+            text4.style.display = 'block';
+            document.getElementById('textnb1').style.display = 'none';
+            document.getElementById('textnb2').style.display = 'none';
+            document.getElementById('textnb3').style.display = 'none';
+        }
+    })
+
+</script>
+
+</html>
